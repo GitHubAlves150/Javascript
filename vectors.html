@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vectors</title>
+</head>
+
+<body>
+    <h1>Vetores</h1>
+    <div style="background-color: gray;">
+        Vetores:<p id="vetores"></p>
+    </div>
+    <div style="background-color: gray;">
+        Indice zero:<p id="indice0"></p>
+    </div>
+
+    <div style="background-color: gray;">
+        Tamanho do vetor:<p id="tamanhoVetor"></p>
+    </div>
+
+    <div style="background-color: gray;">
+        Os Arrays e Objetos podem conter outros Arrays e Objetos(ARRAYS): <br>
+        <p id="arrays0"></p> <br>
+        <p id="arrays1"></p>
+    </div>
+
+    <div style="background-color: gray;">
+        Os Arrays e Objetos podem conter outros Arrays e Objetos(OBJETOS): <br>
+        <p id="objetos0"></p> <br>
+        <p id="objetos1"></p>
+    </div>
+    <div style="background-color: rgb(49, 49, 252); padding: 10px;">
+        <h1>relacional</h1>
+        string é igual á strings?
+        <p id="igualdade"></p>
+        string é menor strings?
+        <p id="menor"></p>
+        falso é igual a falso
+        <p id="falso"></p>
+        Operador AND
+        <p id="booleanoAND"></p>
+    </div>
+    <div style="background-color: rgb(129, 235, 8); padding: 10px; ">
+        <h1>funcoes podem ser atribuidas para variaveis</h1>
+        <p id="retornoFunc"></p>
+    </div>
+</body>
+
+</html>
+
+<script>
+    var vectors = [32, 1, 7, 8, 101];
+    document.getElementById("vetores").textContent = vectors;
+    document.getElementById("indice0").textContent = vectors[0];
+    document.getElementById("tamanhoVetor").textContent = vectors.length;
+
+    //Os Arrays e Objetos podem conter outros Arrays e Objetos
+    //=====array====
+    var cartesiano = [
+        { x: 2, y: 3 }, { x: 5, y: 7 }
+    ];
+    document.getElementById("arrays0").textContent = "x: " + cartesiano[0].x + ", y: " + cartesiano[0].y;
+    document.getElementById("arrays1").textContent = "x: " + cartesiano[1].x + ", y: " + cartesiano[1].y;
+    //=====Objeto====
+    var objeto = {
+        trial1: [[1, 3], [6, 7]],
+        trial2: [[7, 9], [3, 2]]
+    };
+    document.getElementById("objetos0").textContent = "objetos: " + objeto.trial1[1];
+    //Relacional entre strings
+    let str0 = "string";
+    let str1 = "strings";
+    document.getElementById("igualdade").textContent = str0 == str1;
+    document.getElementById("menor").textContent = str0 < str1;
+    document.getElementById("falso").textContent = false == (str0 < str1);
+
+    //Operadores booleanos
+    document.getElementById("booleanoAND").textContent = (str0 < str1) && (str0 != str1);
+    //retorno de funcao, e atribuida numa variavel
+    function plus1(C) {
+        return C + 1;
+    }
+    document.getElementById("retornoFunc").textContent = plus1(3);
+    //Quando combinamos funçoes com objetos, obtemos MÈTODOS:
+
+</script>
