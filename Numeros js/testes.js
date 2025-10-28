@@ -1,5 +1,5 @@
-'use strict'
 
+//'use strict'//Deve-se comentar esta linha para poder usar o this
 
 var numero = 114;
 var now = new Date();
@@ -82,6 +82,24 @@ var num = parseInt('11', 5);
 document.getElementById('output23').innerHTML = "::" + parseInt(num);
 //conversao de objeto para primitivo
 //document.getElementById('output24').innerHTML= "Conversao: " + [1, 2, 3].toString();
-document.getElementById('output24').innerHTML = "Conversao: " + ({ x: 1, y: 2 }).toString();//[object Object]
+//document.getElementById('output24').innerHTML = "Conversao: " + ({ x: 1, y: 2 }).toString();//[object Object]
 document.getElementById('output24').innerHTML = "Conversao: " + Date(2015, 0, 2);//[object Object]
 
+//usando typeof
+var ola = "ola lucas skywallker";
+var num = 1234
+document.getElementById('output25').innerHTML = "a variavel \"ola\": " + ola + " ...é do tipo " + typeof (ola);
+//declarando variaveis locais e globais
+var nomeGlobal = "Mundo";
+
+function saudar() {
+  console.log("Olá..., " + this.nomeGlobal);
+  console.log("Olá, " + window.nomeGlobal);
+  console.log("Olá, " + globalThis.nomeGlobal);
+}
+saudar();
+
+//valueOf()
+var numb_0= "34";
+var Num_1 = 4.6;
+document.getElementById('output26').innerHTML= numb_0.valueOf() + Num_1.valueOf();

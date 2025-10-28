@@ -1,0 +1,28 @@
+/* Estilo básico para o botão */
+#meuBotao {
+    padding: 15px 30px;
+    font-size: 18px;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    background-color: #007BFF;
+    color: white;
+    position: relative; /* Essencial para a animação de movimento */
+    left: 0;
+    transition: all 0.5s ease-in-out; /* Suaviza a transição de estilos */
+}
+
+/* Define a animação */
+@keyframes moverDireita {
+    from {
+        left: 0;
+    }
+    to {
+        left: 80%; /* Move o botão para 80% da largura da tela */
+    }
+}
+
+/* Classe que será adicionada ao clicar */
+.animado {
+    animation: moverDireita 2s forwards; /* Aplica a animação por 2 segundos e mantém o estado final */
+}
