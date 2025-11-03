@@ -11,14 +11,18 @@
             font-family: Arial, sans-serif;
             text-align: left;
             margin-top: 50px;
-            overflow-x: hidden; /* evita barra de rolagem quando o quadrado vai pra direita */
+            overflow-x: hidden;
+            /* evita barra de rolagem quando o quadrado vai pra direita */
+        }
+
+        .rodaPE {
+            background-color: #007BFF;
         }
 
         /* Botão parado */
         #meuBotao {
-            text-align: left;
             padding: 5px;
-            font-size: 18px;
+            font-size: 48px;
             cursor: pointer;
             border: none;
             border-radius: 8px;
@@ -34,35 +38,106 @@
         /* Quadrado inicial */
         #quadrado {
             text-align: left;
-            width: 100px;
-            height: 100px;
-            border: solid gray 1px;
+            width: 190px;
+            height: 650px;
+            border: solid rgb(229, 231, 228) 10px;
             left: 0;
             margin: 4px auto;
-            opacity: 0; /* invisível no início */
-            transform: scale(1); /* tamanho inicial */
+            opacity: 0;
+            /* invisível no início */
+            transform: scale(5);
+            /* tamanho inicial */
         }
 
         /* Animação: movimento + crescimento + fade in/out */
         @keyframes moverCrescerDesvanecer {
-             0% { left: 0; opacity: 0; transform: scale(1); }
-      2% { opacity: 1; transform: scale(2); }
-      4% { opacity: 1; transform: scale(4); }
-      6% { opacity: 1; transform: scale(6); }
-      8% { opacity: 1; transform: scale(8); }
-      10% { opacity: 1; transform: scale(10); }
-      12% { opacity: 1; transform: scale(12); }
-      14% { opacity: 1; transform: scale(14); }
-      16% { opacity: 1; transform: scale(16); }
-      18% { opacity: 1; transform: scale(18); }
-      20% { opacity: 1; transform: scale(20); }
-      22% { opacity: 1; transform: scale(22); }
-      24% { opacity: 1; transform: scale(24); }
-      26% { opacity: 1; transform: scale(26); }
-      28% { opacity: 1; transform: scale(28); }
-      30% { opacity: 1; transform: scale(30); }
-      32% { opacity: 0; transform: scale(32); }
-      /* 34% { opacity: 1; transform: scale(34); }
+            0% {
+                left: 0;
+                opacity: 0;
+                transform: scale(1);
+            }
+
+            2% {
+                opacity: 1;
+                transform: scale(2);
+            }
+
+            4% {
+                opacity: 1;
+                transform: scale(4);
+            }
+
+            6% {
+                opacity: 1;
+                transform: scale(6);
+            }
+
+            8% {
+                opacity: 1;
+                transform: scale(8);
+            }
+
+            10% {
+                opacity: 1;
+                transform: scale(10);
+            }
+
+            12% {
+                opacity: 1;
+                transform: scale(12);
+            }
+
+            14% {
+                opacity: 1;
+                transform: scale(14);
+            }
+
+            16% {
+                opacity: 1;
+                transform: scale(16);
+            }
+
+            18% {
+                opacity: 1;
+                transform: scale(18);
+            }
+
+            20% {
+                opacity: 1;
+                transform: scale(20);
+            }
+
+            22% {
+                opacity: 1;
+                transform: scale(22);
+            }
+
+            24% {
+                opacity: 1;
+                transform: scale(24);
+            }
+
+            26% {
+                opacity: 1;
+                transform: scale(26);
+            }
+
+            28% {
+                opacity: 1;
+                transform: scale(28);
+            }
+
+            30% {
+                opacity: 1;
+                transform: scale(30);
+            }
+
+            32% {
+                opacity: 0;
+                transform: scale(32);
+            }
+
+            /* 34% { opacity: 1; transform: scale(34); }
       36% { opacity: 1; transform: scale(36); }
       38% { opacity: 1; transform: scale(38); }
       40% { opacity: 1; transform: scale(40); }
@@ -106,12 +181,27 @@
 </head>
 
 <body>
-
+    <div class="div1">
+        <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti ipsam corporis nesciunt consequatur
+            expedita, laborum enim voluptatibus voluptates aliquam ut labore praesentium. Odio, perferendis laboriosam
+            doloribus magni consectetur labore obcaecati?
+        </p>
+    </div>
+    <div id="quadrado"></div>
     <button id="meuBotao">Iniciar Animação</button>
 
-    <div id="quadrado"></div>
 
-    <script>
+
+    <footer class="rodaPE">
+        <p>lucas </p>
+    </footer>
+
+
+    
+
+</body>
+<script>
         document.addEventListener('DOMContentLoaded', () => {
             const botao = document.getElementById('meuBotao');
             const quadrado = document.getElementById('quadrado');
@@ -124,7 +214,4 @@
             });
         });
     </script>
-
-</body>
-
 </html>
